@@ -13,10 +13,12 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.marsphotos.R
 import com.example.marsphotos.ui.screens.HomeScreen
 import com.example.marsphotos.ui.screens.MarsViewModel
+import com.example.marsphotos.ui.theme.MarsPhotosTheme
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -51,4 +53,12 @@ fun MarsTopAppBar(scrollBehavior: TopAppBarScrollBehavior, modifier: Modifier = 
         },
         modifier = modifier
     )
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun AppPreview(){
+    MarsPhotosTheme {
+        MarsPhotosApp()
+    }
 }

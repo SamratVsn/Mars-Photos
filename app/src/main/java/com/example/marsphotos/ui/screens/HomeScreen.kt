@@ -31,11 +31,3 @@ fun ResultScreen(photos: String, modifier: Modifier = Modifier) {
         Text(text = photos)
     }
 }
-
-@Preview(showBackground = true)
-@Composable
-fun ResultScreenPreview() {
-    MarsPhotosTheme {
-        ResultScreen(stringResource(R.string.placeholder_result))
-    }
-}
