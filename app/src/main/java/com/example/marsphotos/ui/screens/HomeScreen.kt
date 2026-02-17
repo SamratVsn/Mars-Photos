@@ -22,6 +22,7 @@ import com.example.marsphotos.R
 fun HomeScreen(
     marsUiState: MarsUiState,
     modifier: Modifier = Modifier,
+    contentPadding: PaddingValues = PaddingValues(0.dp),
 ){
     when (marsUiState) {
         is MarsUiState.Loading -> LoadingScreen(modifier = modifier.fillMaxSize())
