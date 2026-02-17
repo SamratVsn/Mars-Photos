@@ -22,7 +22,7 @@ import com.example.marsphotos.ui.theme.MarsPhotosTheme
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun MarsPhotosApp(){
+fun MarsPhotosApp() {
     val scrollBehavior = TopAppBarDefaults.enterAlwaysScrollBehavior()
     Scaffold(
         modifier = Modifier.nestedScroll(scrollBehavior.nestedScrollConnection),
@@ -30,11 +30,12 @@ fun MarsPhotosApp(){
     ) {
         Surface(
             modifier = Modifier.fillMaxSize()
-        ){
+        ) {
             val marsViewModel: MarsViewModel =
                 viewModel(factory = MarsViewModel.Factory)
             HomeScreen(
                 marsUiState = marsViewModel.marsUiState,
+                retryAction = marsViewModel::getMarsPhotos,
                 contentPadding = it
             )
         }
